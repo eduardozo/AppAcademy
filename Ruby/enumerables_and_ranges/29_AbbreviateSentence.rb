@@ -16,7 +16,12 @@ def abbreviate_sentence(sent)
   return abbreviated
 end
 
-
+def remove_vowels(word)
+  vowels = ["a", "e", "i", "o", "u"]
+  new_word = ""
+  word.each_char { |char| new_word += vowels.include?(char) ? "" : char }
+  return new_word
+end
 
 puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
 puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
