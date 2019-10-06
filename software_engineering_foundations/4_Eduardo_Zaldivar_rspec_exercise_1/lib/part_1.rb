@@ -5,3 +5,7 @@ end
 def average_array(array)
   array.sum / array.length.to_f
 end
+
+def repeat(string, num)
+  string * num
+end
