@@ -9,3 +9,7 @@ end
 def repeat(string, num)
   string * num
 end
+
+def yell(string)
+  string.upcase << '!'
+end
