@@ -13,3 +13,14 @@ end
 def yell(string)
   string.upcase << '!'
 end
+
+def alternating_case(string)
+  arr = string.downcase.split
+
+  i = 0
+  while i < arr.length
+    arr[i].upcase!
+    i += 2
+  end
+  arr.join(' ')
+end
