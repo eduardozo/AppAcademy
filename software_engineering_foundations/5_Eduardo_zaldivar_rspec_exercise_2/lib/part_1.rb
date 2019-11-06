@@ -12,3 +12,12 @@ def partition(array, num)
   new_array
 end
 
+def merge(hash_1, hash_2)
+  new_hash = Hash.new(0)
+
+  hash_1.each { |key, value| new_hash[key] = value }
+  hash_2.each { |key, value| new_hash[key] = value }
+
+  new_hash
+end
+
