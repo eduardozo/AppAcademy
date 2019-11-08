@@ -21,3 +21,17 @@ def merge(hash_1, hash_2)
   new_hash
 end
 
+def censor(sentence, array)
+  vowels = 'aeiou'
+  sentence_arr = sentence.split
+
+  sentence_arr.each do |world|
+    array.each do |censor|
+      if world.downcase == censor
+        censor.each_char.with_index { |char, i| vowels.include?(char) ? world[i] = '*' : 0 }
+      end
+    end
+  end
+  sentence_arr.join(' ')
+end
+
