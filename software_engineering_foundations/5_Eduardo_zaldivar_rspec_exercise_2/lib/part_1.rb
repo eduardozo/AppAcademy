@@ -35,3 +35,6 @@ def censor(sentence, array)
   sentence_arr.join(' ')
 end
 
+def power_of_two?(num)
+  num != 0 && (num & (num - 1)).zero?
+end
