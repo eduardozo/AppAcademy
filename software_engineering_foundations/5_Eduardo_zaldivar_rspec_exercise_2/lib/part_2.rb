@@ -13,3 +13,20 @@ def reverse(word)
   w_reverse
 end
 
+def substrings(str)
+  substr = []
+
+  i = 0
+  while i < str.length
+    substr << str[i]
+    j = 1 + i
+    while j < str.length
+      substr << str[i..j]
+      j += 1
+    end
+    i += 1
+  end
+
+  substr
+end
+
