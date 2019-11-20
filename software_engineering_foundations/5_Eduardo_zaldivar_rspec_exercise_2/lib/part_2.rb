@@ -30,3 +30,11 @@ def substrings(str)
   substr
 end
 
+def palindrome_substrings(str)
+  array = []
+  substr = substrings(str)
+
+  substr.each { |subs| subs.length > 1 && palindrome?(subs) ? array << subs : '' }
+
+  array
+end
