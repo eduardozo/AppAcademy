@@ -31,3 +31,6 @@ def dupe_indices(arr)
   dupe_hash
 end
 
+def ana_array(arr_1, arr_2)
+  arr_1.all? { |value| arr_2.include?(value) } && (arr_2 - arr_1).empty?
+end
