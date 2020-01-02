@@ -24,3 +24,10 @@ def unique_chars?(str)
   chars_hash.values.all? { |count| count == 1 }
 end
 
+def dupe_indices(arr)
+  dupe_hash = Hash.new(Array.new(0))
+  arr.each_with_index { |key, i| arr.count(key) > 1 ? dupe_hash[key] += [i] : 0 }
+
+  dupe_hash
+end
+
