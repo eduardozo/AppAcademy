@@ -14,3 +14,11 @@ def my_select(array, &proc)
   new_array
 end
 
+def my_count(array, &proc)
+  count = 0
+
+  array.each { |ele| count += 1 if proc.call(ele) }
+
+  count
+end
+
