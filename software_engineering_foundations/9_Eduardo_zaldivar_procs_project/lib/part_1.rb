@@ -22,3 +22,11 @@ def my_count(array, &proc)
   count
 end
 
+def my_any?(array, &proc)
+  any = false
+
+  array.each { |ele| any = true if proc.call(ele) }
+
+  any
+end
+
