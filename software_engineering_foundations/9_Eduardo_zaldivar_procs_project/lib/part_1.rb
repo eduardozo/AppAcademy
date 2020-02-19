@@ -30,3 +30,11 @@ def my_any?(array, &proc)
   any
 end
 
+def my_all?(array, &proc)
+  all = true
+
+  array.each { |ele| all = false if !proc.call(ele) }
+
+  all
+end
+
