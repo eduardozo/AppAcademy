@@ -38,3 +38,10 @@ def my_all?(array, &proc)
   all
 end
 
+def my_none?(array, &proc)
+  none = true
+
+  array.each { |ele| none = false if proc.call(ele) }
+
+  none
+end
