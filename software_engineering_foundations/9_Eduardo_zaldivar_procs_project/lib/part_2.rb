@@ -16,3 +16,12 @@ def greater_proc_value(num, proc_1, proc_2)
   result_one > result_two ? result_one : result_two
 end
 
+def and_selector(array, proc_1, proc_2)
+  new_array = []
+
+  array.each { |ele| new_array << ele if proc_1.call(ele) && proc_2.call(ele) }
+
+
+  new_array
+end
+
