@@ -25,3 +25,13 @@ def and_selector(array, proc_1, proc_2)
   new_array
 end
 
+def alternating_mapper(array, proc_1, proc_2)
+  new_array = []
+
+  array.each_with_index do |ele, index|
+    new_array << proc_1.call(ele) if index.even?
+    new_array << proc_2.call(ele) if index.odd?
+  end
+
+  new_array
+end
