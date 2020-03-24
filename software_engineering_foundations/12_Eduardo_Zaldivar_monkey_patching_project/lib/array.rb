@@ -7,6 +7,12 @@ class Array
     max - min
   end
 
-  
+  def average
+    return nil if empty?
+
+    sum / size.to_f
+  end
+
+
 
 end
