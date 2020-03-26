@@ -24,6 +24,14 @@ class Array
     (sorted_arr[mid_index] + sorted_arr[mid_index - 1]) / 2.0 if length.even?
   end
 
+  def counts
+    hash = Hash.new(0)
+
+    each { |k| hash[k] += 1 }
+
+    hash
+  end
+
 
 
 end
