@@ -32,6 +32,14 @@ class Array
     hash
   end
 
+  def my_count(value)
+    count = 0
+
+    self.each { |v| count += 1 if value == v }
+
+    count
+  end
+
 
 
 end
