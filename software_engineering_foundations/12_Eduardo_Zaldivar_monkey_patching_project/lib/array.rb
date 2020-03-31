@@ -40,6 +40,12 @@ class Array
     count
   end
 
+  def my_index(value)
+    self.each_with_index { |ele, index| return index if value == ele }
+
+    nil
+  end
+
 
 
 end
