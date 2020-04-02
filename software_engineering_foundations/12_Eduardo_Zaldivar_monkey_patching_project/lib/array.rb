@@ -46,6 +46,14 @@ class Array
     nil
   end
 
+  def my_uniq
+    hash = {}
+
+    self.each { |ele| hash[ele] = 0 }
+
+    hash.keys
+  end
+
 
 
 end
