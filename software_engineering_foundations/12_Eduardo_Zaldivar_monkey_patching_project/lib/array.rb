@@ -54,6 +54,16 @@ class Array
     hash.keys
   end
 
+  def my_transpose
+    transposed = Array.new(self.length) { [] }
 
+    self.each do |ele|
+      ele.each_with_index do |sub_ele, i|
+        transposed[i] << sub_ele
+      end
+    end
+
+    transposed
+  end
 
 end
