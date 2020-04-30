@@ -58,6 +58,15 @@ class Hangman
     try_guess(char)
   end
 
+  def win?
+    if @guess_word.join == @secret_word
+      puts('WIN')
+      return true
+    end
+
+    false
+  end
+
 
 
 end
