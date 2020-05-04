@@ -76,6 +76,13 @@ class Hangman
     false
   end
 
-
+  def game_over?
+    if self.win? || self.lose?
+      puts @secret_word
+      return true
+    else
+      return false
+    end
+  end
 
 end
