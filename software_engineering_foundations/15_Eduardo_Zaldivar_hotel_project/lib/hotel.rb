@@ -37,6 +37,13 @@ class Hotel
     end
   end
 
+  def has_vacancy?
+    room_list = @rooms.values
+    return false if room_list.all?(&:full?)
+
+    true
+  end
+
 
 
 end
