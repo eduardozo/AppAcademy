@@ -44,6 +44,10 @@ class Hotel
     true
   end
 
-
+  def list_rooms
+    @rooms.each do |room_name, room|
+      puts "#{room_name},  #{room.available_space.to_i}"
+    end
+  end
 
 end
