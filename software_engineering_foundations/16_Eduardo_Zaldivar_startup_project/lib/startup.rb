@@ -15,6 +15,10 @@ class Startup
     @salaries.key?(title)
   end
 
+  def >(other_startup)
+    self.funding > other_startup.funding
+  end
+
 
 
 end
