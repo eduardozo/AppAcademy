@@ -19,6 +19,14 @@ class Startup
     self.funding > other_startup.funding
   end
 
+  def hire(employee_name, title)
+    if self.valid_title?(title)
+      @employees << Employee.new(employee_name, title)
+    else
+      raise 'Employee cannot be hired'
+    end
+  end
+
 
 
 end
