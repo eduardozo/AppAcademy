@@ -46,6 +46,15 @@ class Startup
     @employees.each { |employee| self.pay_employee(employee) }
   end
 
+  def average_salary
+    return nil if employees.size.zero?
+
+    total_salary = 0
+    @employees.each { |employee| total_salary += @salaries[employee.title] }
+
+    total_salary / @employees.length
+  end
+
 
 
 end
