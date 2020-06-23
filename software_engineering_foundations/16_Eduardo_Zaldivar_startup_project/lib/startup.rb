@@ -55,6 +55,11 @@ class Startup
     total_salary / @employees.length
   end
 
+  def close
+    @employees = []
+    @funding = 0
+  end
+
 
 
 end
