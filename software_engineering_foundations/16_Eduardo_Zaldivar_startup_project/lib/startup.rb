@@ -60,6 +60,18 @@ class Startup
     @funding = 0
   end
 
+  def acquire(other_startup)
+    # add funding
+    @funding += other_startup.funding
 
+    # merging salaries
+    @salaries = other_startup.salaries.merge(@salaries)
+
+    # hire employees
+    @employees += other_startup.employees
+
+    # close the other startup
+    other_startup.close
+  end
 
 end
