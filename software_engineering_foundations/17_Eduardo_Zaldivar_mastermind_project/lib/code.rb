@@ -10,6 +10,10 @@ class Code
       'Y' => :yellow
   }.freeze
 
+  def self.valid_pegs?(chars)
+    chars.all? { |char| POSSIBLE_PEGS.keys.include?(char.upcase) }
+  end
+
 
 
 end
