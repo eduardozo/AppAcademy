@@ -14,6 +14,12 @@ class Code
     chars.all? { |char| POSSIBLE_PEGS.keys.include?(char.upcase) }
   end
 
+  def self.random(length)
+    random_pegs = []
+    length.times { random_pegs << POSSIBLE_PEGS.keys.sample }
+    Code.new(random_pegs)
+  end
+
 
 
 end
