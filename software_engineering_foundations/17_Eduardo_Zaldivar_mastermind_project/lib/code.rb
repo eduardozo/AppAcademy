@@ -20,6 +20,14 @@ class Code
     Code.new(random_pegs)
   end
 
+  def self.from_string(pegs)
+    Code.new(pegs.chars)
+  end
+
+  def initialize(pegs)
+    @pegs = peg_list(pegs)
+  end
+
 
 
 end
