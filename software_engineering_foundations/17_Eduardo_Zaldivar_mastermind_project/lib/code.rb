@@ -28,6 +28,12 @@ class Code
     @pegs = peg_list(pegs)
   end
 
+  def peg_list(pegs)
+    raise 'invalid pegs' unless Code.valid_pegs?(pegs)
+
+    pegs.map(&:upcase)
+  end
+
 
 
 end
