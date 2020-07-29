@@ -42,6 +42,12 @@ class Code
     @pegs.length
   end
 
+  def num_exact_matches(guess_code)
+    count = 0
+    @pegs.each_with_index { |peg, index| count += 1 if peg == guess_code[index] }
+    count
+  end
+
 
 
 end
