@@ -48,6 +48,18 @@ class Code
     count
   end
 
+  def num_near_matches(guess_code)
+    count = 0
+    guess_code.pegs.each_with_index do |peg, index|
+      matches_pegs = @pegs.include?(peg)
+      different_index = peg != @pegs[index]
+
+      count += 1 if different_index && matches_pegs
+    end
+
+    count
+  end
+
 
 
 end
