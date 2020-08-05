@@ -60,6 +60,8 @@ class Code
     count
   end
 
-
+  def ==(other_code)
+    @pegs == other_code.pegs
+  end
 
 end
