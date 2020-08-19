@@ -13,6 +13,15 @@ class Board
     @size = n * n
   end
 
+  def [](position)
+    @grid[position.first][position.last]
+  end
+
+  def []=(position, value)
+    row, col = position
+    @grid[row][col] = value
+  end
+
 
 
 end
