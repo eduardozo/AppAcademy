@@ -22,6 +22,21 @@ class Board
     @grid[row][col] = value
   end
 
+  def num_ships
+    # @grid.flatten.count(:S)
+    # count += @grid.map { |row| row.count(:S) }.sum
+
+    count = 0
+
+    @grid.each_index do |row|
+      @grid.each_index do |col|
+        count += 1 if @grid[row][col] == :S
+      end
+    end
+
+    count
+  end
+
 
 
 end
