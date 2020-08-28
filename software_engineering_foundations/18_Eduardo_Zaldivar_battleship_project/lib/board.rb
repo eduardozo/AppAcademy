@@ -50,6 +50,17 @@ class Board
     end
   end
 
+  def place_random_ships
+    num_random_ships = @size * 0.25
+
+    while num_ships < num_random_ships
+      rand_row = rand(0...@grid.length)
+      rand_col = rand(0...@grid.length)
+      position = [rand_row, rand_col]
+      self[position] = :S
+    end
+  end
+
 
 
 end
