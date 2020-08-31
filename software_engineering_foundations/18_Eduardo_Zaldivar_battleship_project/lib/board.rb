@@ -61,6 +61,12 @@ class Board
     end
   end
 
+  def hidden_ships_grid
+    @grid.map do |row|
+      row.map { |ele| ele == :S ? :N : ele }
+    end
+  end
+
 
 
 end
