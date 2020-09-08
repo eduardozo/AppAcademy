@@ -26,5 +26,14 @@ class Battleship
     end
   end
 
+  def win?
+    if @board.num_ships.zero?
+      p 'you win'
+      true
+    else
+      false
+    end
+  end
+
 
 end
