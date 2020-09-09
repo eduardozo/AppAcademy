@@ -35,5 +35,9 @@ class Battleship
     end
   end
 
+  def game_over?
+    win? || lose?
+  end
+
 
 end
