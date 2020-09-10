@@ -39,5 +39,13 @@ class Battleship
     win? || lose?
   end
 
+  def turn
+    position = @player.get_move
+    successful = @board.attack(position)
 
+    @remaining_misses -= 1 unless successful
+
+    @board.print
+    puts "Remaining misses: #{@remaining_misses}"
+  end
 end
