@@ -44,3 +44,22 @@ def lucas_number(n)
 end
 
 
+# Write a method, sum_array(array), that takes in an array of numbers.
+# The method should return the total sum of the elements.
+# 
+# Solve this recursively!
+#
+# Examples:
+#
+# sum_array([])             # => 0
+# sum_array([5])            # => 5
+# sum_array([5, 2])         # => 7
+# sum_array([4, 10, -1, 2]) # => 15
+def sum_array(array)
+  return 0 if array.empty?
+  return array[0] if array.length == 1
+
+  array[-1] + sum_array(array[0...-1])
+end
+
+
